@@ -1,0 +1,48 @@
+:root {
+    --pale: #ffff;
+    --blue: #2E4374;
+  }
+img.framed {
+    box-shadow:
+      -50px -50px 0 -40px var(--pale),
+      50px 50px 0 -40px var(--pale);
+  }
+
+  img.framed2 {
+    box-shadow:
+      -50px -50px 0 -40px var(--blue),
+      50px 50px 0 -40px var(--blue);
+  }
+
+
+  .player-wrapper {
+    width: fit-content; 
+    height: fit-content; 
+  }
+
+  #perkenalan{
+    color: whitesmoke;
+  }
+
+.trait{
+    background-color: antiquewhite;
+    width: fit-content;
+    height: 10%;
+    font-size: 30px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.box{
+    border-radius: 20px;
+    background-color: whitesmoke;
+    width: 1%;
+}
+
+.point{
+    background-color: #ffff;
+    border-radius: 20px;
+    width: 200px;
+    text-align: left;
+}
