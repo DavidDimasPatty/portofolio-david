@@ -3,3 +3,11 @@
     color: white;  
     font-size: 30px;
 }
+
+.line{
+    border: 2px white solid;
+}
+
+.hide{
+    display:none;
+}

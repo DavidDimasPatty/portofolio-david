@@ -45,6 +45,14 @@ const HomePage = () => {
     }
   };
 
+  function mouseOver(text){
+    document.getElementById("textAdd").innerHTML="I am a "+text;
+  }
+
+  function mouseOut(){
+    document.getElementById("textAdd").innerHTML="I am a...";
+  }
+
   return (
     <div>
       <Header />
@@ -106,45 +114,45 @@ const HomePage = () => {
               className="row justify-content-center align-self-center mt-3 ms-2"
             >
               <Row className="mb-4">
-                <h2>I am a...</h2>
+                <h2 id="textAdd">I am a...</h2>
               </Row>
               <Col className="me-3">
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Hard Work</h3>
+                  <h3 style={{ "font-weight": "200" }} onMouseOver={()=>mouseOver("Hard Work")} onMouseOut={()=>mouseOut()}>Hard Work</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Team Player</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Team Player")} onMouseOut={()=>mouseOut()}>Team Player</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Passion</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Passionate")} onMouseOut={()=>mouseOut()}>Passionate</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Polite</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Polite")} onMouseOut={()=>mouseOut()}>Polite</h3>
                 </Row>
                 <Row className="point">
-                  <h3 style={{ "font-weight": "200" }}>Curious</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Curious")} onMouseOut={()=>mouseOut()}>Curious</h3>
                 </Row>
               </Col>
 
               <Col>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Relentless</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Relentless")} onMouseOut={()=>mouseOut()}>Relentless</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Humble</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Humble")} onMouseOut={()=>mouseOut()}>Humble</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Friendly</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Friendly")} onMouseOut={()=>mouseOut()}>Friendly</h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}>Loyal</h3>
+                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Loyal")} onMouseOut={()=>mouseOut()}>Loyal</h3>
                 </Row>
                 <Row className="point">
-                  <h3 style={{ "font-weight": "200" }}>Deligent</h3>
+                  <h3 style={{ "font-weight": "200" }} onMouseOver={()=>mouseOver("Deligent")} onMouseOut={()=>mouseOut()}>Deligent</h3>
                 </Row>
               </Col>
               <Row className="mt-4">
-                <h2>Person</h2>
+                <h2 id="textEnd">Person</h2>
               </Row>
             </Col>
           </Row>
@@ -157,12 +165,12 @@ const HomePage = () => {
           <Row>
             <Col className="mt-4">
               <center>
-                <h2>A Little About Me</h2>
+                <h2 className="mb-1">A Little About Me <div id="bawah1" className="mt-2"/> </h2>
               </center>
             </Col>
             <Col className="mt-4">
               <center>
-                <h2>My Hobby</h2>
+                <h2 className="mb-1">My Hobby <div id="bawah2" className="mt-2"/> </h2>
               </center>
             </Col>
           </Row>
