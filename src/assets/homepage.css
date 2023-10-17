@@ -57,3 +57,7 @@ img.framed {
     background-image: linear-gradient(-90deg, #2E4374 50%, black 50%);
     z-index:-1;
 }
+
+html{
+  background-color: black;
+}

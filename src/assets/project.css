@@ -1,0 +1,71 @@
+.bg2{
+    background-image: linear-gradient(-90deg, #2E4374 50%, black 50%);
+}
+
+.cover1{
+    width: 50%;
+    box-shadow: 5px 5px #888;
+    border-radius: 5px;
+}
+
+.cardbg{
+    background-image: linear-gradient(-135deg, #fff 50%, #2E4374 60%);
+    border: #ffff solid 5px;
+    box-shadow: 10px 15px #888;
+    border-radius: 10px;
+}
+.cardbody{
+    background-color: #fff;
+    border: #888 solid 2px;
+    border-radius: 10px;
+}
+
+.cardbg:hover {
+    transform: scale(1.05);
+  }
+
+/* CSS */
+.button-50 {
+  align-items: center;
+  appearance: none;
+  background-color: black;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,black 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-50:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-50:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, black 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-50:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}

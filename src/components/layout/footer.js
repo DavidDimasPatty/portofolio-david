@@ -8,7 +8,7 @@ import Column from "react-bootstrap/Col";
 
 const Footer = () => {
   return (
-    <footer >
+    <footer>
       <center>
         <p className="mt-3">
           <strong>Portofolio </strong> by{" "}
