@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../assets/homepage.css";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
+import { FaJava, FaJs, FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
+import {DiMongodb} from "react-icons/di"
+import {BiLogoFlutter} from "react-icons/bi"
+import {SiKotlin,SiCsharp, SiMysql} from "react-icons/si"
 import Header from "./layout/header";
 import foto1 from "../assets/foto1.jpeg";
 import foto2 from "../assets/foto2.jpeg";
+import kopi1 from "../assets/kopi 1.jpeg";
+import kopi2 from "../assets/kopi 2.jpeg";
+import kopi3 from "../assets/kopi 3.jpeg";
+import kopi4 from "../assets/kopi 4.jpeg";
 import perkenalan from "../assets/perkenalan.mp4";
 import ReactPlayer from "react-player";
 import Footer from "./layout/footer";
@@ -26,14 +34,14 @@ const HomePage = () => {
     for (var i = 0; i < arr.length; i++) {
       var temp = "";
       for (var j = 0; j < arr[i].length; j++) {
-        await delay(200);
+        await delay(150);
         temp = temp + arr[i][j];
         setPosition(temp);
       }
       if (i + 1 == arr.length) {
         i = 0;
       }
-      await delay(1000);
+      await delay(300);
     }
   };
 
@@ -41,10 +49,10 @@ const HomePage = () => {
     <div>
       <Header />
       {/* Baris 1 */}
-      <div style={{ backgroundColor: "#2E4374" }} className="pb-5">
+      <div className="pb-5 bg">
         <Container>
-          <Row className="justify-content-md-center">
-            <Col className="mt-5" id="perkenalan">
+          <Row>
+            <Col className="mt-5" id="perkenalan" xs={3}>
               <Row className="mt-5">
                 <center className="mt-2">
                   <h6>Hello, I'm</h6>
@@ -55,9 +63,19 @@ const HomePage = () => {
                   <h2>David Dimas Patty</h2>
                 </center>
               </Row>
-              <Row>
+              <Row className="mb-2 mt-2">
                 <center>
                   <h3 style={{ fontWeight: "300" }}>A {position}</h3>
+                </center>
+              </Row>
+              <Row>
+                <center>
+                  I currently reside in Bandung, Indonesia. I am the eldest of
+                  two siblings. I hold a degree in Computer Engineering from
+                  Parahyangan Catholic University. During my academic journey, I
+                  had the opportunity to engage in independent internships with
+                  three distinguished companies, although these contracts were
+                  not extended due to contractual constraints.
                 </center>
               </Row>
               <Row>
@@ -69,32 +87,65 @@ const HomePage = () => {
                       href=""
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      View My Portofolio
+                      My Portofolio
                     </a>
                   </center>
                 </Col>
               </Row>
             </Col>
 
-            <Col className="mt-4" md="auto">
-              <img class="framed" src={foto1} width={"300px"} alt="david" />
+            <Col
+              className="mt-4 row justify-content-center align-self-center"
+              md="auto"
+            >
+              <img class="framed" src={foto1} alt="david" />
             </Col>
 
             <Col
               xs="4"
-              className="row justify-content-center align-self-center mt-3"
+              className="row justify-content-center align-self-center mt-3 ms-2"
             >
-              <div>
-                <Row className="mb-2 point">
-                  <h3>Hard Work</h3>
+              <Row className="mb-4">
+                <h2>I am a...</h2>
+              </Row>
+              <Col className="me-3">
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Hard Work</h3>
                 </Row>
-                <Row className="mb-2 point">
-                  <h3>Team Player</h3>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Team Player</h3>
+                </Row>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Passion</h3>
+                </Row>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Polite</h3>
                 </Row>
                 <Row className="point">
-                  <h3>Passion</h3>
+                  <h3 style={{ "font-weight": "200" }}>Curious</h3>
                 </Row>
-              </div>
+              </Col>
+
+              <Col>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Relentless</h3>
+                </Row>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Humble</h3>
+                </Row>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Friendly</h3>
+                </Row>
+                <Row className="mb-3 point">
+                  <h3 style={{ "font-weight": "200" }}>Loyal</h3>
+                </Row>
+                <Row className="point">
+                  <h3 style={{ "font-weight": "200" }}>Deligent</h3>
+                </Row>
+              </Col>
+              <Row className="mt-4">
+                <h2>Person</h2>
+              </Row>
             </Col>
           </Row>
         </Container>
@@ -109,55 +160,158 @@ const HomePage = () => {
                 <h2>A Little About Me</h2>
               </center>
             </Col>
-            <Col></Col>
+            <Col className="mt-4">
+              <center>
+                <h2>My Hobby</h2>
+              </center>
+            </Col>
           </Row>
           <Row>
             <Col>
-              <center className="ms-5">
-                Hello, My name is David Dimas Patty, and I hail from Bandung,
-                where I currently reside. I am the eldest of two siblings. I
-                hold a degree in Computer Engineering from Parahyangan Catholic
-                University. During my academic journey, I had the opportunity to
-                engage in independent internships with three distinguished
-                companies, although these contracts were not extended due to
-                contractual constraints. This experience exposed me to various
-                facets of web application development, particularly in the
-                context of Laravel framework and PHP. My academic tenure also
-                presented me with numerous projects. In many instances, I was
-                entrusted with the role of project lead, overseeing team
-                coordination and project scheduling. These projects encompassed
-                the development of web applications, desktop applications,
-                mobile applications on the Android platform, and AI systems. As
-                a result of these experiences, I have cultivated proficiency in
-                application development, deployment, database management, API
-                integration, machine learning implementation, and effective
-                collaboration within a team.
-              </center>
-            </Col>
-            <Col>
+              <div className="mb-4" id="awal">
+                I currently reside in Bandung, Indonesia. I am the eldest of two
+                siblings. I hold a degree in Computer Engineering from
+                Parahyangan Catholic University. During my academic journey, I
+                had the opportunity to engage in independent internships with
+                three distinguished companies, although these contracts were not
+                extended due to contractual constraints.
+              </div>
               <center>
                 <img class="framed2" src={foto2} width={"40%"} alt="david" />
               </center>
+            </Col>
+            <Col>
+              <center className="mb-4">
+                One of my favorite pastimes is visiting the charming cafes in
+                Bandung. I thoroughly enjoy the experience of sitting in cozy,
+                welcoming coffee houses and exploring their diverse menus. What
+                I particularly savor is trying out their 'Long Black' coffee.
+                It's not just a drink; it's an art form, and I relish every sip
+                as I savor the rich, bold flavors of this classic espresso-based
+                beverage. Exploring the coffee culture in Bandung has become a
+                delightful and cherished hobby of mine
+              </center>
+              <Carousel fade>
+                <Carousel.Item interval={2000}>
+                  <center>
+                    <img
+                      src={kopi1}
+                      class="framed2"
+                      width={"230px"}
+                      height={"320px"}
+                    />
+                  </center>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                  <center>
+                    <img
+                      src={kopi2}
+                      class="framed2"
+                      width={"230px"}
+                      height={"320px"}
+                    />
+                  </center>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                  <center>
+                    <img
+                      src={kopi3}
+                      class="framed2"
+                      width={"230px"}
+                      height={"320px"}
+                    />
+                  </center>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                  <center>
+                    <img
+                      src={kopi4}
+                      class="framed2"
+                      width={"230px"}
+                      height={"320px"}
+                    />
+                  </center>
+                </Carousel.Item>
+              </Carousel>
             </Col>
           </Row>
         </Container>
       </div>
 
       {/* Baris 3 */}
-      <div style={{ backgroundColor: "#2E4374" }}>
+      <div
+        style={{ backgroundColor: "#2E4374", color: "whitesmoke" }}
+        className="pb-3"
+      >
         <Container>
           <Row>
             <center>
-              <h2>
-                The programming languages I am proficient in for professional
-                use:
-              </h2>
+              <h2 className="mt-2">My programming languages:</h2>
+              <Carousel className="mt-2">
+                <Carousel.Item interval={2000}>
+                  <Row className="justify-content-md-center mb-4" style={{ fontSize: "100px" }}>
+                  
+                    <Col md="2">
+                      <FaJava />
+                      <p style={{ fontSize: "20px" }}>Java</p>
+                    </Col>
+                    <Col  md="2">
+                      <FaJs />
+                      <p style={{ fontSize: "20px" }}>JavaScript</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <FaHtml5 />
+                      <p style={{ fontSize: "20px" }}>Html</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <FaCss3Alt />
+                      <p style={{ fontSize: "20px" }}>Css</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <FaPython />
+                      <p style={{ fontSize: "20px" }}>Python</p>
+                    </Col>
+                  </Row>
+                </Carousel.Item>
+
+                <Carousel.Item interval={2000}>
+                  <Row className="justify-content-md-center mb-4" style={{ fontSize: "100px" }}>
+                  
+                    <Col md="2">
+                      <BiLogoFlutter />
+                      <p style={{ fontSize: "20px" }}>Dart</p>
+                    </Col>
+                    <Col  md="2">
+                      <SiKotlin />
+                      <p style={{ fontSize: "20px" }}>Kotlin</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <SiCsharp />
+                      <p style={{ fontSize: "20px" }}>C#</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <SiMysql />
+                      <p style={{ fontSize: "20px" }}>SQL</p>
+                    </Col>
+
+                    <Col  md="2">
+                      <DiMongodb />
+                      <p style={{ fontSize: "20px" }}>NoSQL</p>
+                    </Col>
+                  </Row>
+                </Carousel.Item>
+              </Carousel>
             </center>
           </Row>
         </Container>
       </div>
-
-      {/* Baris 4 */}
+      {/* 
+      Baris 4
       <div style={{ backgroundColor: "#E5C3A6" }} className="pb-4">
         <Container>
           <Row>
@@ -167,7 +321,7 @@ const HomePage = () => {
             </center>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

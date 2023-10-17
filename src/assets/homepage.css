@@ -14,6 +14,11 @@ img.framed {
       50px 50px 0 -40px var(--blue);
   }
 
+#id{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
 
   .player-wrapper {
     width: fit-content; 
@@ -45,4 +50,10 @@ img.framed {
     border-radius: 20px;
     width: 200px;
     text-align: left;
+    box-shadow: 10px 10px;
+}
+
+.bg{
+    background-image: linear-gradient(-90deg, #2E4374 50%, black 50%);
+    z-index:-1;
 }
