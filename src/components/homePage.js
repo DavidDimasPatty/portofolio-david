@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../assets/homepage.css";
 import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import { FaJava, FaJs, FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
-import {DiMongodb} from "react-icons/di"
-import {BiLogoFlutter} from "react-icons/bi"
-import {SiKotlin,SiCsharp, SiMysql} from "react-icons/si"
+import { DiMongodb } from "react-icons/di";
+import { BiLogoFlutter } from "react-icons/bi";
+import { SiKotlin, SiCsharp, SiMysql } from "react-icons/si";
 import Header from "./layout/header";
 import foto1 from "../assets/foto1.jpeg";
 import foto2 from "../assets/foto2.jpeg";
@@ -45,23 +45,22 @@ const HomePage = () => {
     }
   };
 
-  function mouseOver(text){
+  function mouseOver(text) {
     var textAddElement = document.getElementById("textAdd");
     textAddElement.innerText = "I am a " + text;
-  
+
     textAddElement.classList.add("animate");
-  
-  
+
     // Jeda sebentar sebelum menambahkan kelas kembali untuk memicu ulang animasi
     setTimeout(function () {
       textAddElement.classList.remove("animate");
     }, 10); // Sesuaikan delay sesuai kebutuhan
   }
 
-  function mouseOut(){
+  function mouseOut() {
     var textAddElement = document.getElementById("textAdd");
     textAddElement.innerText = "I am a...";
-   
+
     textAddElement.classList.add("animate");
   }
 
@@ -75,7 +74,7 @@ const HomePage = () => {
             <Col className="mt-5" id="perkenalan" xs={3}>
               <Row className="mt-5">
                 <center className="mt-2">
-                  <h6>Hello, I'm</h6>
+                  <h6>Hello 👋, I'm</h6>
                 </center>
               </Row>
               <Row>
@@ -94,8 +93,8 @@ const HomePage = () => {
                   two siblings. I hold a degree in Computer Engineering from
                   Parahyangan Catholic University. During my academic journey, I
                   had the opportunity to engage in independent internships with
-                  three distinguished companies, although these contracts were
-                  not extended due to contractual constraints.
+                  three distinguished companies to gain my experiences in real
+                  industries.
                 </center>
               </Row>
               <Row>
@@ -130,37 +129,97 @@ const HomePage = () => {
               </Row>
               <Col className="me-3">
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }} onMouseOver={()=>mouseOver("Hard Work")} onMouseOut={()=>mouseOut()}>Hard Work</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Hard Work")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Hard Work
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Team Player")} onMouseOut={()=>mouseOut()}>Team Player</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Team Player")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Team Player
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Passionate")} onMouseOut={()=>mouseOut()}>Passionate</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Passionate")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Passionate
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Polite")} onMouseOut={()=>mouseOut()}>Polite</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Polite")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Polite
+                  </h3>
                 </Row>
                 <Row className="point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Curious")} onMouseOut={()=>mouseOut()}>Curious</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Curious")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Curious
+                  </h3>
                 </Row>
               </Col>
 
               <Col>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Relentless")} onMouseOut={()=>mouseOut()}>Relentless</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Relentless")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Relentless
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Humble")} onMouseOut={()=>mouseOut()}>Humble</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Humble")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Humble
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Friendly")} onMouseOut={()=>mouseOut()}>Friendly</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Friendly")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Friendly
+                  </h3>
                 </Row>
                 <Row className="mb-3 point">
-                  <h3 style={{ "font-weight": "200" }}  onMouseOver={()=>mouseOver("Loyal")} onMouseOut={()=>mouseOut()}>Loyal</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Loyal")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Loyal
+                  </h3>
                 </Row>
                 <Row className="point">
-                  <h3 style={{ "font-weight": "200" }} onMouseOver={()=>mouseOver("Deligent")} onMouseOut={()=>mouseOut()}>Deligent</h3>
+                  <h3
+                    style={{ "font-weight": "200" }}
+                    onMouseOver={() => mouseOver("Deligent")}
+                    onMouseOut={() => mouseOut()}
+                  >
+                    Deligent
+                  </h3>
                 </Row>
               </Col>
               <Row className="mt-4">
@@ -177,24 +236,30 @@ const HomePage = () => {
           <Row>
             <Col className="mt-4">
               <center>
-                <h2 className="mb-1">A Little About Me <div id="bawah1" className="mt-2"/> </h2>
+                <h2 className="mb-1">
+                  A Little About Me <div id="bawah1" className="mt-2" />{" "}
+                </h2>
               </center>
             </Col>
             <Col className="mt-4">
               <center>
-                <h2 className="mb-1">My Hobby <div id="bawah2" className="mt-2"/> </h2>
+                <h2 className="mb-1">
+                  My Hobby <div id="bawah2" className="mt-2" />{" "}
+                </h2>
               </center>
             </Col>
           </Row>
           <Row>
             <Col>
               <div className="mb-4" id="awal">
-                I currently reside in Bandung, Indonesia. I am the eldest of two
-                siblings. I hold a degree in Computer Engineering from
-                Parahyangan Catholic University. During my academic journey, I
-                had the opportunity to engage in independent internships with
-                three distinguished companies, although these contracts were not
-                extended due to contractual constraints.
+                I am a hardworking individual who is always enthusiastic about
+                taking on new challenges. I possess the ability to work
+                diligently and not afraid to take initiative. I am also highly
+                sociable and have excellent communication skills, allowing me to
+                easily adapt to a team environment. I have a neat and organized
+                approach to my tasks and always strive to deliver the best
+                results. I believe that a positive attitude and a willingness to
+                learn are the keys to success in achieving goals.
               </div>
               <center>
                 <img class="framed2" src={foto2} width={"40%"} alt="david" />
@@ -269,28 +334,30 @@ const HomePage = () => {
               <h2 className="mt-2">My programming languages:</h2>
               <Carousel className="mt-2">
                 <Carousel.Item interval={2000}>
-                  <Row className="justify-content-md-center mb-4" style={{ fontSize: "100px" }}>
-                  
+                  <Row
+                    className="justify-content-md-center mb-4"
+                    style={{ fontSize: "100px" }}
+                  >
                     <Col md="2">
                       <FaJava />
                       <p style={{ fontSize: "20px" }}>Java</p>
                     </Col>
-                    <Col  md="2">
+                    <Col md="2">
                       <FaJs />
                       <p style={{ fontSize: "20px" }}>JavaScript</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <FaHtml5 />
                       <p style={{ fontSize: "20px" }}>Html</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <FaCss3Alt />
                       <p style={{ fontSize: "20px" }}>Css</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <FaPython />
                       <p style={{ fontSize: "20px" }}>Python</p>
                     </Col>
@@ -298,28 +365,30 @@ const HomePage = () => {
                 </Carousel.Item>
 
                 <Carousel.Item interval={2000}>
-                  <Row className="justify-content-md-center mb-4" style={{ fontSize: "100px" }}>
-                  
+                  <Row
+                    className="justify-content-md-center mb-4"
+                    style={{ fontSize: "100px" }}
+                  >
                     <Col md="2">
                       <BiLogoFlutter />
                       <p style={{ fontSize: "20px" }}>Dart</p>
                     </Col>
-                    <Col  md="2">
+                    <Col md="2">
                       <SiKotlin />
                       <p style={{ fontSize: "20px" }}>Kotlin</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <SiCsharp />
                       <p style={{ fontSize: "20px" }}>C#</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <SiMysql />
                       <p style={{ fontSize: "20px" }}>SQL</p>
                     </Col>
 
-                    <Col  md="2">
+                    <Col md="2">
                       <DiMongodb />
                       <p style={{ fontSize: "20px" }}>NoSQL</p>
                     </Col>

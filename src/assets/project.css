@@ -9,7 +9,7 @@
 }
 
 .cardbg{
-    background-image: linear-gradient(-135deg, #fff 50%, #2E4374 60%);
+    background-image: linear-gradient(-135deg, black 50%, #2E4374 60%);
     border: #ffff solid 5px;
     box-shadow: 10px 15px #888;
     border-radius: 10px;
@@ -69,3 +69,14 @@
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+.custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background: 
+    radial-gradient(farthest-side,#3100F4 95%,#0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 14px),#000000 0);
+  animation:s9 2s infinite linear;
+}
+@keyframes s9 {to{transform: rotate(1turn)}}
