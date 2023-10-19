@@ -46,11 +46,23 @@ const HomePage = () => {
   };
 
   function mouseOver(text){
-    document.getElementById("textAdd").innerHTML="I am a "+text;
+    var textAddElement = document.getElementById("textAdd");
+    textAddElement.innerText = "I am a " + text;
+  
+    textAddElement.classList.add("animate");
+  
+  
+    // Jeda sebentar sebelum menambahkan kelas kembali untuk memicu ulang animasi
+    setTimeout(function () {
+      textAddElement.classList.remove("animate");
+    }, 10); // Sesuaikan delay sesuai kebutuhan
   }
 
   function mouseOut(){
-    document.getElementById("textAdd").innerHTML="I am a...";
+    var textAddElement = document.getElementById("textAdd");
+    textAddElement.innerText = "I am a...";
+   
+    textAddElement.classList.add("animate");
   }
 
   return (
@@ -113,8 +125,8 @@ const HomePage = () => {
               xs="4"
               className="row justify-content-center align-self-center mt-3 ms-2"
             >
-              <Row className="mb-4">
-                <h2 id="textAdd">I am a...</h2>
+              <Row className="mb-4 d-flex">
+                <h2 id="textAdd">I am a... </h2>
               </Row>
               <Col className="me-3">
                 <Row className="mb-3 point">
