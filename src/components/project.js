@@ -19,6 +19,7 @@ import hpi from "../assets/homepageImam.png";
 import hpu from "../assets/homepagePI.png";
 import mnistdata from "../assets/mnistdata.png";
 import kahoot from "../assets/kahoot.png";
+import sqlonly from "../assets/sqlonly.png";
 import "../assets/project.css";
 
 const Project = () => {
@@ -33,7 +34,7 @@ const Project = () => {
       image: Tobacco,
       category: "website",
       url: "https://tobacco.vercel.app/",
-      description: "Tobacco market place",
+      description: "Tobacco market place. Provide buying products for users",
       lang: ["JavaScript", "React", "Mongo DB"],
     });
     arrTemp.push({
@@ -51,7 +52,7 @@ const Project = () => {
       category: "mobile",
       url:
         "https://drive.google.com/drive/u/0/folders/1EYfF7u3YNRutKp0J1_pIfxE9SqRPBGaa",
-      description: "Mobile Application for Catholic Services",
+      description: "Mobile Application for Catholic Services. Used for helping user enroll catholic services.",
       lang: ["Flutter", "Dart", "Mongo DB", "Fire Base"],
     });
     arrTemp.push({
@@ -61,7 +62,7 @@ const Project = () => {
       url:
         "https://drive.google.com/drive/u/0/folders/1EYfF7u3YNRutKp0J1_pIfxE9SqRPBGaa",
       description:
-        "Mobile Application for handling Catholic Services. Only for priests",
+        "Mobile Application for handling Catholic Services. Used only by priests.",
       lang: ["Flutter", "Dart", "Mongo DB", "Fire Base"],
     });
     arrTemp.push({
@@ -70,7 +71,7 @@ const Project = () => {
       category: "mobile",
       url:
         "https://drive.google.com/drive/u/0/folders/1EYfF7u3YNRutKp0J1_pIfxE9SqRPBGaa",
-      description: "Mobile Application for handling accounts. Only for admin",
+      description: "Mobile Application for handling accounts. Used only by admin.",
       lang: ["Flutter", "Dart", "Mongo DB", "Fire Base"],
     });
     arrTemp.push({
@@ -79,7 +80,7 @@ const Project = () => {
       category: "website",
       url:
         "https://github.com/DavidDimasPatty/MNIST_Recognition_NeuralNetwork/blob/master/6181801040.ipynb",
-      description: "Deep learning to recognize hand writing",
+      description: "Deep learning approach for recognize handwriting using MNIST Data. Accuration reach up to 95%.",
       lang: ["Python"],
     });
     arrTemp.push({
@@ -87,8 +88,16 @@ const Project = () => {
       image: kahoot,
       category: "dekstop",
       url: "https://github.com/DavidDimasPatty/python-kahoot",
-      description: "Socket programming using Python",
+      description: "Socket programming approach using Python for interaction beetwen server and client in dekstop",
       lang: ["Python"],
+    });
+    arrTemp.push({
+      name: "SQL Only (Hamper store)",
+      image: sqlonly,
+      category: "website",
+      url: "https://github.com/DavidDimasPatty/Hampers-Online-SQL-ONLY-",
+      description: "Store procedures for establishing hamper store. Including sells, buys, and organize products.",
+      lang: ["SQL"],
     });
     setArrProject(arrTemp);
     setArrProjectTemp(arrTemp);
@@ -142,7 +151,7 @@ const Project = () => {
             {arrProject.map((data, index) => (
               <Col xs={4} className="mt-5">
                 <Card
-                  style={{ width: "90%", height: "100%", display: "block" }}
+                  style={{ width: "90%", height: "100%"}}
                   className="me-5 cardbg"
                 >
                   <center>
@@ -201,6 +210,13 @@ const Project = () => {
                           arr.push(
                             <Badge pill bg="info" className="me-2">
                               Dart
+                            </Badge>
+                          );
+                        }
+                        if (data.lang[i] == "SQL") {
+                          arr.push(
+                            <Badge pill bg="info" className="me-2">
+                              SQL
                             </Badge>
                           );
                         }
