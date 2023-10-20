@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import Row from "react-bootstrap/Row";
-import Column from "react-bootstrap/Col";
+import Col from "react-bootstrap/Col";
 
 const Footer = () => {
   return (
@@ -16,17 +16,13 @@ const Footer = () => {
         </p>
         <div>Contact me on:</div>
         
-        <Row xs={"auto"} className="d-flex justify-content-center mb-4">
-          <Column>
-            <FaInstagram onClick={()=>{window.open("https://www.instagram.com/daviddimasss/")}} />{" "}
-          </Column>{" "}
-          <Column>
-            <FaTwitter onClick={()=>{window.open("https://twitter.com/DavidGarpit/")}} />{" "}
-          </Column>{" "}
-          <Column>
+        
+          <Col className="mb-3">
+            <FaInstagram onClick={()=>{window.open("https://www.instagram.com/daviddimasss/")}} className="me-2"/>{" "}
+            <FaTwitter onClick={()=>{window.open("https://twitter.com/DavidGarpit/")}} className="me-2"/>{" "}
             <FaEnvelope onClick={()=>{window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=ddimaspatty@gmail.com&subject=Contact%20Me%20")}} />{" "}
-          </Column>
-        </Row>
+          </Col>{" "}
+        
       </center>
     </footer>
   );

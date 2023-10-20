@@ -20,11 +20,16 @@ import hpu from "../assets/homepagePI.png";
 import mnistdata from "../assets/mnistdata.png";
 import kahoot from "../assets/kahoot.png";
 import sqlonly from "../assets/sqlonly.png";
+import othello from "../assets/othello.png";
+import snakecharmer from "../assets/snakecharmermachine.png";
+import portofolio from "../assets/portofolio.png";
 import "../assets/project.css";
 
 const Project = () => {
   const [arrProject, setArrProject] = useState([]);
   const [load, setLoad] = useState([]);
+  const [page, setPage] = useState(0);
+  const [currPage, setCurrPage] = useState(0);
   const [arrProjectTemp, setArrProjectTemp] = useState(true);
 
   useEffect(() => {
@@ -34,7 +39,7 @@ const Project = () => {
       image: Tobacco,
       category: "website",
       url: "https://tobacco.vercel.app/",
-      description: "Tobacco market place. Provide buying products for users",
+      description: "Tobacco market place. Provide buying products for users.",
       lang: ["JavaScript", "React", "Mongo DB"],
     });
     arrTemp.push({
@@ -43,7 +48,7 @@ const Project = () => {
       category: "website",
       url: "https://admin-pelayanan-iman-katolik.vercel.app/",
       description:
-        "Dashboard for admin. Use username admin and password admin to login",
+        "Dashboard for admin. Use username admin and password admin to login.",
       lang: ["JavaScript", "React", "Mongo DB"],
     });
     arrTemp.push({
@@ -52,7 +57,8 @@ const Project = () => {
       category: "mobile",
       url:
         "https://drive.google.com/drive/u/0/folders/1EYfF7u3YNRutKp0J1_pIfxE9SqRPBGaa",
-      description: "Mobile Application for Catholic Services. Used for helping user enroll catholic services.",
+      description:
+        "Mobile Application for Catholic Services. Used for helping user enroll catholic services.",
       lang: ["Flutter", "Dart", "Mongo DB", "Fire Base"],
     });
     arrTemp.push({
@@ -71,7 +77,8 @@ const Project = () => {
       category: "mobile",
       url:
         "https://drive.google.com/drive/u/0/folders/1EYfF7u3YNRutKp0J1_pIfxE9SqRPBGaa",
-      description: "Mobile Application for handling accounts. Used only by admin.",
+      description:
+        "Mobile Application for handling accounts. Used only by admin.",
       lang: ["Flutter", "Dart", "Mongo DB", "Fire Base"],
     });
     arrTemp.push({
@@ -80,7 +87,8 @@ const Project = () => {
       category: "website",
       url:
         "https://github.com/DavidDimasPatty/MNIST_Recognition_NeuralNetwork/blob/master/6181801040.ipynb",
-      description: "Deep learning approach for recognize handwriting using MNIST Data. Accuration reach up to 95%.",
+      description:
+        "Deep learning approach for recognize handwriting using MNIST Data. Accuration reach up to 95%.",
       lang: ["Python"],
     });
     arrTemp.push({
@@ -88,23 +96,58 @@ const Project = () => {
       image: kahoot,
       category: "dekstop",
       url: "https://github.com/DavidDimasPatty/python-kahoot",
-      description: "Socket programming approach using Python for interaction beetwen server and client in dekstop",
+      description:
+        "Socket programming approach using Python for interaction beetwen server and client in dekstop environment.",
       lang: ["Python"],
     });
     arrTemp.push({
       name: "SQL Only (Hamper store)",
       image: sqlonly,
-      category: "website",
+      category: "dekstop",
       url: "https://github.com/DavidDimasPatty/Hampers-Online-SQL-ONLY-",
-      description: "Store procedures for establishing hamper store. Including sells, buys, and organize products.",
+      description:
+        "Store procedures for establishing hamper store. Including sells, buys, and organize products.",
       lang: ["SQL"],
     });
+    arrTemp.push({
+      name: "Othello Dekstop Game",
+      image: othello,
+      category: "dekstop",
+      url: "https://github.com/DavidDimasPatty/OthelloAgent",
+      description:
+        "Offline Othello game for 2 persons running in desktop. Built with the Multi Agents System approach.",
+      lang: ["Java"],
+    });
+    arrTemp.push({
+      name: "Snake Charmer Machine Learning",
+      image: snakecharmer,
+      category: "dekstop",
+      url: "https://github.com/DavidDimasPatty/SnakeCharmerMachineLearning",
+      description:
+        "Find the best way a snake can fit in the box. Built with machine learning approach.",
+      lang: ["Java"],
+    });
+    arrTemp.push({
+      name: "Portofolio",
+      image: portofolio,
+      category: "website",
+      url: "/",
+      description: "You're already in here 😄.",
+      lang: ["JavaScript", "React"],
+    });
+    var total = arrTemp.length;
+    if ((total+1) % 6 > 0) {
+      setPage((arrTemp.length / 6));
+    } else {
+      setPage(arrTemp.length / 6);
+    }
     setArrProject(arrTemp);
     setArrProjectTemp(arrTemp);
     setLoad(false);
   }, []);
 
   function find(name) {
+   setCurrPage(0)
     setArrProject(arrProjectTemp);
     var arrTemp = [];
     for (var i = 0; i < arrProjectTemp.length; i++) {
@@ -112,7 +155,49 @@ const Project = () => {
         arrTemp.push(arrProjectTemp[i]);
       }
     }
+    var total = arrTemp.length;
+    if ((total+1) % 6 > 0) {
+      setPage((arrTemp.length / 6));
+    } else {
+      setPage(arrTemp.length / 6);
+    }
     setArrProject(arrTemp);
+  }
+
+  function findCategory(cat) {
+    setCurrPage(0)
+    setArrProject(arrProjectTemp);
+    if (cat != "") {
+      document.getElementById("reset").style.display = "";
+      var arrTemp = [];
+      for (var i = 0; i < arrProjectTemp.length; i++) {
+        if (
+          arrProjectTemp[i].category.toLowerCase().includes(cat.toLowerCase())
+        ) {
+          arrTemp.push(arrProjectTemp[i]);
+        }
+      }
+      var total = arrTemp.length;
+      if ((total+1) % 6 > 0) {
+        setPage((arrTemp.length / 6));
+      } else {
+        setPage(arrTemp.length / 6);
+      }
+      setArrProject(arrTemp);
+    } else {
+      setArrProject(arrProjectTemp);
+      var total = arrProjectTemp.length;
+      if ((total+1) % 6 > 0) {
+        setPage((arrProjectTemp.length / 6));
+      } else {
+        setPage(arrProjectTemp.length / 6);
+      }     
+      document.getElementById("reset").style.display = "none";
+    }
+  }
+
+  function changePagination(page){
+    setCurrPage(page)
   }
 
   if (load) {
@@ -145,13 +230,64 @@ const Project = () => {
       </div>
 
       {/* Baris 2 */}
+      <div className="pb-3">
+        <Container>
+          <Row className="mt-1">
+            <center>
+              <button
+                class="button-50 me-2"
+                role="button"
+                onClick={() => {
+                  findCategory("website");
+                }}
+              >
+                Website
+              </button>
+              <button
+                class="button-50 me-2"
+                role="button"
+                onClick={() => {
+                  findCategory("mobile");
+                }}
+              >
+                Mobile
+              </button>
+              <button
+                class="button-50 me-2"
+                role="button"
+                onClick={() => {
+                  findCategory("dekstop");
+                }}
+              >
+                Dekstop
+              </button>
+              <center className="mt-2">
+                <Button
+                  class="me-2"
+                  variant="light"
+                  id="reset"
+                  style={{ display: "none" }}
+                  onClick={() => {
+                    findCategory("");
+                  }}
+                >
+                  Reset
+                </Button>
+              </center>
+            </center>
+          </Row>
+        </Container>
+      </div>
+
+      {/* Baris 3 */}
       <div className="pb-5">
         <Container>
           <Row className="d-flex">
             {arrProject.map((data, index) => (
-              <Col xs={4} className="mt-5">
+              index<(currPage+1)*6&&index>=(currPage)*6?
+               <Col xs={4} className="mt-5">
                 <Card
-                  style={{ width: "90%", height: "100%"}}
+                  style={{ width: "90%", height: "100%" }}
                   className="me-5 cardbg"
                 >
                   <center>
@@ -192,6 +328,7 @@ const Project = () => {
                             </Badge>
                           );
                         }
+
                         if (data.lang[i] == "Fire Base") {
                           arr.push(
                             <Badge pill bg="danger" className="me-2">
@@ -199,9 +336,22 @@ const Project = () => {
                             </Badge>
                           );
                         }
+                        if (data.lang[i] == "Java") {
+                          arr.push(
+                            <Badge pill bg="danger" className="me-2">
+                              Java
+                            </Badge>
+                          );
+                        }
+
                         if (data.lang[i] == "Flutter") {
                           arr.push(
-                            <Badge pill bg="warning" text="dark" className="me-2">
+                            <Badge
+                              pill
+                              bg="warning"
+                              text="dark"
+                              className="me-2"
+                            >
                               Flutter
                             </Badge>
                           );
@@ -276,9 +426,25 @@ const Project = () => {
                     </center>
                   </Card.Body>
                 </Card>
-              </Col>
+              </Col>:""
+              
             ))}
           </Row>
+          <Col className="mt-5">
+            <center>
+              {(() => {
+                var arr = [];
+                for (var i = 0; i < page; i++) {
+                  arr.push(
+                    <button class="button-50 ms-3" role="button" value={i} onClick={(e) => {changePagination(e.target.value)}}>
+                      {i + 1}
+                    </button>
+                  );
+                }
+                return arr;
+              })()}
+            </center>
+          </Col>
         </Container>
       </div>
       <Footer />

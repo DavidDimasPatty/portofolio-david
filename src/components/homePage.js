@@ -100,10 +100,19 @@ const HomePage = () => {
               <Row>
                 <Col className="mt-4">
                   <center>
-                    <Button variant="light">Hire Me!</Button>
+                    <Button
+                      variant="light"
+                      onClick={() => {
+                        window.open(
+                          "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=ddimaspatty@gmail.com&subject=Contact%20Me%20"
+                        );
+                      }}
+                    >
+                      Hire Me!
+                    </Button>
                     <a
                       className="ms-4"
-                      href=""
+                      href="/project"
                       style={{ textDecoration: "none", color: "white" }}
                     >
                       My Portofolio
@@ -251,7 +260,7 @@ const HomePage = () => {
           </Row>
           <Row>
             <Col>
-              <div className="mb-4" id="awal">
+              <center className="mb-4" id="awal">
                 I am a hardworking individual who is always enthusiastic about
                 taking on new challenges. I possess the ability to work
                 diligently and not afraid to take initiative. I am also highly
@@ -260,7 +269,7 @@ const HomePage = () => {
                 approach to my tasks and always strive to deliver the best
                 results. I believe that a positive attitude and a willingness to
                 learn are the keys to success in achieving goals.
-              </div>
+              </center>
               <center>
                 <img class="framed2" src={foto2} width={"40%"} alt="david" />
               </center>
@@ -274,7 +283,7 @@ const HomePage = () => {
                 It's not just a drink; it's an art form, and I relish every sip
                 as I savor the rich, bold flavors of this classic espresso-based
                 beverage. Exploring the coffee culture in Bandung has become a
-                delightful and cherished hobby of mine
+                delightful and cherished hobby of mine.
               </center>
               <Carousel fade>
                 <Carousel.Item interval={2000}>

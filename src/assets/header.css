@@ -1,5 +1,5 @@
 .headers{
-    background-color: black;
+    background-image: linear-gradient(-90deg, #2E4374 50%, black 50%);
     color: white;  
     font-size: 30px;
 }
