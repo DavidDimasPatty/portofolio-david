@@ -62,6 +62,12 @@ html{
   background-color: black;
 }
 
+.textDesc{
+  font-family: Georgia, serif;
+}
+.programlang{
+  font-family: Jazz LET, fantasy;
+}
 .point:hover{
   transform: scale(1.05);
   background-color: black;

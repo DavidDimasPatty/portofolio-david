@@ -26,7 +26,7 @@ const HomePage = () => {
 
   const countDown = async () => {
     var arr = [
-      "System Engineer",
+      "Software Engineer",
       "Web Developer",
       "Mobile Developer",
       "Fresh Graduate",
@@ -88,8 +88,8 @@ const HomePage = () => {
                 </center>
               </Row>
               <Row>
-                <center>
-                  I currently reside in Bandung, Indonesia. I am the eldest of
+                <center className="textDesc">
+                  I currently reside in Bandung, Indonesia. I'm the eldest of
                   two siblings. I hold a degree in Computer Engineering from
                   Parahyangan Catholic University. During my academic journey, I
                   had the opportunity to engage in independent internships with
@@ -260,7 +260,7 @@ const HomePage = () => {
           </Row>
           <Row>
             <Col>
-              <center className="mb-4" id="awal">
+              <center className="mb-4 textDesc" id="awal">
                 I am a hardworking individual who is always enthusiastic about
                 taking on new challenges. I possess the ability to work
                 diligently and not afraid to take initiative. I am also highly
@@ -271,11 +271,11 @@ const HomePage = () => {
                 learn are the keys to success in achieving goals.
               </center>
               <center>
-                <img class="framed2" src={foto2} width={"40%"} alt="david" />
+                <img class="framed2 textDesc" src={foto2} width={"40%"} alt="david" />
               </center>
             </Col>
             <Col>
-              <center className="mb-4">
+              <center className="mb-4 textDesc">
                 One of my favorite pastimes is visiting the charming cafes in
                 Bandung. I thoroughly enjoy the experience of sitting in cozy,
                 welcoming coffee houses and exploring their diverse menus. What
@@ -340,7 +340,7 @@ const HomePage = () => {
         <Container>
           <Row>
             <center>
-              <h2 className="mt-2">My programming languages:</h2>
+              <h2 className="mt-2 programlang">My Programming Languages:</h2>
               <Carousel className="mt-2">
                 <Carousel.Item interval={2000}>
                   <Row

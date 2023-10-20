@@ -213,7 +213,7 @@ const Project = () => {
         <Container>
           <Row className="mt-5">
             <center>
-              <h3 style={{ color: "white" }}>Find My Project</h3>
+              <h3 style={{ color: "white" }}  id="textFind">Find My Project</h3>
               <InputGroup
                 className="mb-3 cover1"
                 onChange={(e) => find(e.target.value)}
@@ -380,7 +380,7 @@ const Project = () => {
                       }
                       return arr;
                     })()}
-                    <Card.Text>{data.description}</Card.Text>
+                    <Card.Text className="textDesc mt-2">{data.description}</Card.Text>
                     <center>
                       {(() => {
                         if (data.category == "mobile") {
