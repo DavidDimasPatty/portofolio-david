@@ -140,7 +140,7 @@ const Project = () => {
       name: "Donation Website",
       image: twc,
       category: "website",
-      url: "/",
+      url: "https://github.com/DavidDimasPatty/Donation_Website",
       description: "Serverless website for donor and fundraiser.",
       lang: ["PHP", "SQL"],
     });
