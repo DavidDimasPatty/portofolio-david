@@ -23,6 +23,7 @@ import sqlonly from "../assets/sqlonly.png";
 import othello from "../assets/othello.png";
 import snakecharmer from "../assets/snakecharmermachine.png";
 import portofolio from "../assets/portofolio.png";
+import twc from "../assets/twc.png"
 import "../assets/project.css";
 
 const Project = () => {
@@ -134,6 +135,14 @@ const Project = () => {
       url: "/",
       description: "You're already in here 😄.",
       lang: ["JavaScript", "React"],
+    });
+    arrTemp.push({
+      name: "Donation Website",
+      image: twc,
+      category: "website",
+      url: "/",
+      description: "Serverless website for donor and fundraiser.",
+      lang: ["PHP", "SQL"],
     });
     var total = arrTemp.length;
     if ((total+1) % 6 > 0) {
@@ -367,6 +376,13 @@ const Project = () => {
                           arr.push(
                             <Badge pill bg="info" className="me-2">
                               SQL
+                            </Badge>
+                          );
+                        }
+                        if (data.lang[i] == "PHP") {
+                          arr.push(
+                            <Badge pill bg="primary" className="me-2">
+                              PHP
                             </Badge>
                           );
                         }
